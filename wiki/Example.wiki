@@ -14,7 +14,7 @@ Let's find if it is a known algorithm :)
   * Get the pintool _vanilla/pin2.12/aligotTracer.dll_
   * Collect the execution trace:
 {{{
->pin -t aligotTracer.dll startA 401020 endA 40109F -- TEA_Od.exe
+>pin -t aligotTracer.dll startA 401020 endA 40109F -- TEA.exe
 df5ec153
 6e089494
 }}}
