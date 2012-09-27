@@ -8,7 +8,7 @@ These examples assumed you downloaded the vanilla directory from svn trunk.
 
   * Get the targeted program: vanilla/testBinaries/TEA_Od.exe
 
-http://aligot.googlecode.com/svn/img/TEA_Od_IDA.png
+<img src="http://aligot.googlecode.com/svn/img/TEA_Od_IDA.png">
 
   * Get the pintool: vanilla/pin2.12/aligotTracer.dll
   * Collect the execution trace:
