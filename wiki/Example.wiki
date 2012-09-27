@@ -22,3 +22,5 @@ df5ec153
 {{{
 python main.py trace.out
 }}}
+
+http://code.google.com/p/aligot/img/TEA_Od_IDA.png
