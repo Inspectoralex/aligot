@@ -71,7 +71,7 @@ _Note: You could also collect a full trace of the program but the rest of the an
 
 You should then obtain three files:
   # *finalGraph0.png*, a graph representing one possible crypto algorithm extracted from the trace.
-<img src="http://aligot.googlecode.com/svn/img/TEA_graph.png" >
+<img src="http://aligot.googlecode.com/svn/img/TEA_graph.png" width="500">
   # *finalGraph0.dot*, same graph in dot format.
   # *result.txt*, contains the input-output values for each extracted algorithm.
 
