@@ -33,17 +33,20 @@ We specified the start and end addresses of the previous function with the argum
 _Note: You could also collect a full trace of the program but the rest of the analysis is going to take a lot more time. Currently the tool is only suitable for such focus analysis._
 
   * You should then obtain the file *trace.out* that looks like this:
-{{{
+------
+<pre>
 !SOT
 401020!push ebp!RR_ebp_12ff7c_esp_12ff5c!WM_12ff58_4_12ff7c!WR_esp_12ff58
 401021!mov ebp, esp!RR_esp_12ff58!WR_ebp_12ff58
 401023!sub esp, 0x14!RR_esp_12ff58!WR_esp_12ff44
 ...
-}}}
+</pre>
+------
 == Extraction of possible crypto algorithms ==
 
   * Go into *vanilla/extraction* and launch:
-{{{
+------
+<pre>
 > python main.py trace.out
 > Aligot extraction module
 > Start: 2012-09-27 15:03:32.489000
@@ -63,7 +66,8 @@ _Note: You could also collect a full trace of the program but the rest of the an
 
 ---------------------------
 > End: 2012-09-27 15:03:32.704000
-}}}
+</pre>
+------
 
 You should then obtain three files:
   # *finalGraph0.png*, a graph representing one possible crypto algorithm extracted from the trace.
@@ -90,7 +94,8 @@ Coming soon.
 
 == Tracing ==
 
-{{{
+------
+<pre>
 >pin -t aligotTracer.
 dll startA 401060 endA 40159A -- RC4.exe
 Key:
@@ -99,12 +104,14 @@ Plaintext:
 SuperPlainMessageABaseDeTrompette
 Encrypted text:
 d3e852f160d60dd627d66860e97148f5
-}}}
+</pre>
+------
 
 == Extraction of possible crypto algorithms ==
 
   * Go into *vanilla/extraction* and launch:
-{{{
+------
+<pre>
 > Aligot extraction module
 > Start: 2012-09-27 16:24:01.554000
 ---------------------------
@@ -123,7 +130,8 @@ d3e852f160d60dd627d66860e97148f5
 
 ---------------------------
 > End: 2012-09-27 16:24:02.611000
-}}}
+</pre>
+------
 
 == Identification ==
 
