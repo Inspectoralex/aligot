@@ -6,12 +6,12 @@ These examples assumed you downloaded the vanilla directory from svn trunk.
 
 == Tracing ==
 
-  * Let's analyze the program: vanilla/testBinaries/TEA.exe. You should rapidly found the following function that seems to do some crypto weird stuff! 
+  * Let's analyze the program _vanilla/testBinaries/TEA.exe_. You should rapidly found the following function that seems to do some crypto stuff! 
 
 <img src="http://aligot.googlecode.com/svn/img/TEA_IDA.png" height="500" >
 
 Let's find if it is a known algorithm :)
-  * Get the pintool: vanilla/pin2.12/aligotTracer.dll
+  * Get the pintool _vanilla/pin2.12/aligotTracer.dll_
   * Collect the execution trace:
 {{{
 >pin -t aligotTracer.dll startA 401020 endA 40109F -- TEA_Od.exe
