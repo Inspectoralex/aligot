@@ -6,7 +6,7 @@ These examples assumed you downloaded the vanilla directory from svn trunk.
 
 == Tracing ==
 
-  * Let's analyze the program _vanilla/testBinaries/TEA.exe_. You should rapidly found the following function that seems to do some magic stuff:
+  * Let's analyze the program *vanilla/testBinaries/TEA.exe*. You should rapidly found the following function that seems to do some magic stuff:
 
 <img src="http://aligot.googlecode.com/svn/img/TEA_IDA.png" height="500" >
 
