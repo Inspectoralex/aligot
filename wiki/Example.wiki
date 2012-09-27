@@ -6,18 +6,22 @@ These examples assumed you downloaded the vanilla directory from svn trunk.
 
 == Tracing ==
 
-  * Get the targeted program: vanilla/testBinaries/TEA_Od.exe
+  * Let's analyze the program: vanilla/testBinaries/TEA_Od.exe. You should rapidly found the following function that seems to do some crypto weird stuff! 
 
-<img src="http://aligot.googlecode.com/svn/img/TEA_Od_IDA.png" height="500" align=middle>
+<img src="http://aligot.googlecode.com/svn/img/TEA_Od_IDA.png" height="500" >
 
+Let's find if it is a known algorithm :)
   * Get the pintool: vanilla/pin2.12/aligotTracer.dll
   * Collect the execution trace:
 {{{
-> pin -t aligotTracer.dll -- TEA_Od.exe
+>pin -t aligotTracer.dll startA 401020 endA 40109F -- TEA_Od.exe
 df5ec153
 6e089494
 }}}
-  * You should obtain the file trace.out
+
+We specified the start and end addresses of the previous function with the arguments startA and endA. You could also collect a full trace of the program but the rest of the analysis is going to take a lot more time. Currently the tool is only suitable for such focus analysis.
+
+  * You should then obtain the file trace.out
 
 == Extraction of possible crypto algorithms based on loops ==
 
