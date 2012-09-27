@@ -21,7 +21,7 @@ _Note: Depending on your Pin version, this could fail at the execution. In this 
 
 ------
 <pre>
->pin -t aligotTracer.dll startA 401020 endA 40109F -- TEA.exe
+$ pin -t aligotTracer.dll startA 401020 endA 40109F -- TEA.exe
 Input text:
 123456789abcdef
 Key:
@@ -50,7 +50,7 @@ _Note: You could also collect a full trace of the program but the rest of the an
   * Go into *vanilla/extraction* and launch:
 ------
 <pre>
-> python main.py trace.out
+$ python main.py trace.out
 > Aligot extraction module
 > Start: 2012-09-27 15:03:32.489000
 ---------------------------
@@ -111,7 +111,7 @@ We collect manually the corresponding start and end addresses, and launch the tr
 
 ------
 <pre>
->pin -t aligotTracer.dll startA 401060 endA 40159A -- RC4.exe
+$ pin -t aligotTracer.dll startA 401060 endA 40159A -- RC4.exe
 Key:
 SuperKeyIsASuperKey
 Plaintext:
@@ -126,6 +126,7 @@ d3e852f160d60dd627d66860e97148f5
   * Go into *vanilla/extraction* and launch:
 ------
 <pre>
+$ python main.py trace.out
 > Aligot extraction module
 > Start: 2012-09-27 16:24:01.554000
 ---------------------------
