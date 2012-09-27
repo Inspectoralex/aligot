@@ -17,7 +17,7 @@ Let's check if it is a known crypto algorithm :)
   * Collect the execution trace:
 
 <pre>
-{{{
+
 >pin -t aligotTracer.dll startA 401020 endA 40109F -- TEA.exe
 Input text:
 123456789abcdef
@@ -25,7 +25,7 @@ Key:
 deadbee1deadbee2deadbee3deadbee4
 Output text:
 df5ec1536e089494
-}}}
+
 </pre>
 
 
