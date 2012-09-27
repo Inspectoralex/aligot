@@ -34,34 +34,39 @@ We specified the start and end addresses of the previous function with the argum
   * Go into vanilla/extraction and launch:
 {{{
 > python main.py trace.out
-Aligot extraction module
-Magic started at
-2012-09-27 12:31:46.261000
-Loop detection... Done
-Garbage collector for invalid loops... Done (47 loops suppressed)
-Loop I/O... Done
-Garbage collector for useless loops (no I/O)... Done (0 loops suppressed)
-Loop data flow graph building... Done
-Garbage collector for invalid LDFs... Done
-Loop data flow I/O building... Done
-Garbage collector for useless LDFs... Done
-Assigning values to I/O memory parameters... Done
------------------------------------
-Loop Data Flow 0
-1 loop instances
-Start time : 20  (start address: 401055)
-End time : 755
-Input Parameters:
-0x12ff50:4  de ad be e4  |  0x12ff4c:4  de ad be e3  |  0x12ff48:4  de ad be e2  |  0x12ff44:4  de ad be e1  |  0x12ff54:4  00 0
-0 00 20  |  eax:4  89 ab cd ef  |  ebp:4  00 12 ff 58  |  edx:4  c6 ef 37 20  |  ecx:4  01 23 45 67  |  0x0:4  61 c8 86 47  |
-Output Parameters:
-0x12ff54:4  00 00 00 00  |  edi:4  0c 40 0e 4d  |  eax:4  6e 08 94 94  |  edx:4  00 00 00 00  |  esi:4  51 69 05 ea  |  ecx:4  d
-f 5e c1 53  |
------------------------------------
-Dumping results... Done
-Magic ended at
-2012-09-27 12:31:46.353000
-Producing graph... Done
+> Aligot extraction module
+> Start: 2012-09-27 15:03:32.489000
+---------------------------
+
+> Loop detection... Done
+> Garbage collector for invalid loops... Done (47 loops suppressed)
+> Loop I/O... Done
+> Garbage collector for useless loops (no I/O)... Done (0 loops suppressed)
+> Loop data flow graph building... Done
+> Garbage collector for invalid LDFs... Done
+> Loop data flow I/O building... Done
+> Garbage collector for useless LDFs... Done
+> Assigning values to I/O memory parameters... Done
+> Dumping results... Done
+> Producing graph... Done
+
+---------------------------
+> End: 2012-09-27 15:03:32.704000
 }}}
+
+You should then obtain three files:
+  # finalGraph0.png, a graph representing one possible crypto algorithm extracted from the trace.
+  # finalGraph0.dot, same graph in dot format.
+  # result.txt, contains the input-output values for each extracted algorithm.
+
+This last file is the one we are going to use in the next phase.
+
+Note: For a better understanding of the tool, we can check:
+  * "--debug_graph" to produce another graph describing more precisely the loops extracted from the execution trace. In this case:
+<img src="http://aligot.googlecode.com/svn/img/TEA_dg.png" height="500" >
+
+We clearly see our loop, with its arguments.
+
+  *  
 
 debug graph, virer display du loop storage...
