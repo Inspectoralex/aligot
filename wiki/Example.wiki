@@ -6,11 +6,11 @@ These examples assumed you downloaded the vanilla directory from svn trunk.
 
 == Tracing ==
 
-  * Let's analyze the program _vanilla/testBinaries/TEA.exe_. You should rapidly found the following function that seems to do some crypto stuff! 
+  * Let's analyze the program _vanilla/testBinaries/TEA.exe_. You should rapidly found the following function that seems to do some magic stuff:
 
 <img src="http://aligot.googlecode.com/svn/img/TEA_IDA.png" height="500" >
 
-Let's find if it is a known algorithm :)
+Let's check if it is a known crypto algorithm :)
   * Get the pintool _vanilla/pin2.12/aligotTracer.dll_
   * Collect the execution trace:
 {{{
@@ -19,9 +19,11 @@ df5ec153
 6e089494
 }}}
 
-We specified the start and end addresses of the previous function with the arguments startA and endA. You could also collect a full trace of the program but the rest of the analysis is going to take a lot more time. Currently the tool is only suitable for such focus analysis.
+We specified the start and end addresses of the previous function with the arguments `startA` and `endA`. 
 
-  * You should then obtain the file trace.out that looks like this:
+_Note: You could also collect a full trace of the program but the rest of the analysis is going to take a lot more time. Currently the tool is only suitable for such focus analysis._
+
+  * You should then obtain the file _trace.out_ that looks like this:
 {{{
 !SOT
 401020!push ebp!RR_ebp_12ff7c_esp_12ff5c!WM_12ff58_4_12ff7c!WR_esp_12ff58
@@ -29,9 +31,9 @@ We specified the start and end addresses of the previous function with the argum
 401023!sub esp, 0x14!RR_esp_12ff58!WR_esp_12ff44
 ...
 }}}
-== Extraction of possible crypto algorithms based on loops ==
+== Extraction of possible crypto algorithms ==
 
-  * Go into vanilla/extraction and launch:
+  * Go into _vanilla/extraction_ and launch:
 {{{
 > python main.py trace.out
 > Aligot extraction module
@@ -61,12 +63,11 @@ You should then obtain three files:
 
 This last file is the one we are going to use in the next phase.
 
-Note: For a better understanding of the tool, we can check:
+_Note: For a better understanding of the tool, we can check:
   * "--debug_graph" to produce another graph describing more precisely the loops extracted from the execution trace. In this case:
 <img src="http://aligot.googlecode.com/svn/img/TEA_dg.png" height="500" >
 
 We clearly see our loop, with its arguments.
 
-  *  
-
-debug graph, virer display du loop storage...
+  * "--debug_mode" to display every step of the loop detection algorithm.
+_
