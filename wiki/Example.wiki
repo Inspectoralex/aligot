@@ -1,6 +1,6 @@
 #summary Example of analysis
 
-These examples assumed you downloaded the vanilla directory from svn trunk.
+These are non-obfuscated examples to demonstrate the tool usage. 
 
 = TEA =
 
