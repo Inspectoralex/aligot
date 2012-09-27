@@ -1,4 +1,12 @@
-#summary Example of analysis with the program testBinaries/TEA/TEA_Od.exe
+#summary Example of analysis
 
-= Tracing =
+= TEA_Od =
 
+== Tracing ==
+
+* Get the targeted program /trunk/vanilla/testBinaries/TEA_Od.exe
+* Get the pintool /trunk/vanilla/pin2.12/aligotTracer.dll
+* Get the execution trace:
+{{{
+pin -t aligotTracer.dll -- TEA_Od.exe
+}}}
