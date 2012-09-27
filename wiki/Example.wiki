@@ -13,7 +13,10 @@ Let's take a look at *vanilla/testBinaries/TEA/TEA.exe*. You should rapidly foun
 Let's check if it is a known crypto algorithm :)
 
 == Tracing ==
-  * Get the pintool *vanilla/pin2.12/aligotTracer.dll*
+  * Get the pintool *vanilla/tracer/pin2.12/aligotTracer.dll*
+
+_Note: Depending on your Pin version, this could not work. You can also compile the tracer source code yourself (vanilla/tracer/src/)._
+
   * Collect the execution trace:
 
 ------
