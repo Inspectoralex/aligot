@@ -15,7 +15,7 @@ Let's check if it is a known crypto algorithm :)
 == Tracing ==
   * Get the pintool *vanilla/tracer/pin2.12/aligotTracer.dll*
 
-_Note: Depending on your Pin version, this could not work. You can also compile the tracer source code yourself (vanilla/tracer/src/)._
+_Note: Depending on your Pin version, this could fail at the execution. In this case you have to compile the tracer yourself (vanilla/tracer/src/)._
 
   * Collect the execution trace:
 
