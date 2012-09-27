@@ -1,12 +1,24 @@
 #summary Example of analysis
 
+These examples assumed you downloaded the vanilla directory from svn trunk.
+
 = TEA =
 
 == Tracing ==
 
-  * Get the targeted program /trunk/vanilla/testBinaries/TEA_Od.exe
-  * Get the pintool /trunk/vanilla/pin2.12/aligotTracer.dll
-  * Get the execution trace:
+  * Get the targeted program: vanilla/testBinaries/TEA_Od.exe
+  * Get the pintool: vanilla/pin2.12/aligotTracer.dll
+  * Collect the execution trace:
 {{{
-pin -t aligotTracer.dll -- TEA_Od.exe
+> pin -t aligotTracer.dll -- TEA_Od.exe
+df5ec153
+6e089494
+}}}
+  * You should obtain the file trace.out
+
+== Extraction of possible crypto algorithms based on loops ==
+
+  * Go into vanilla/extraction and launch:
+{{{
+python main.py trace.out
 }}}
