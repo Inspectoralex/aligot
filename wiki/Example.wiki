@@ -67,7 +67,6 @@ _Note: For a better understanding of the tool, we can check:
   * "--debug_graph" to produce another graph describing more precisely the loops extracted from the execution trace. In this case:
 <img src="http://aligot.googlecode.com/svn/img/TEA_dg.png" height="500" >
 
-We clearly see our loop, with its arguments.
+_We clearly see our loop, with its arguments._
 
-  * "--debug_mode" to display every step of the loop detection algorithm.
-_
+  * _"--debug_mode" to display every step of the loop detection algorithm._
