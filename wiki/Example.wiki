@@ -11,7 +11,7 @@ These examples assumed you downloaded the vanilla directory from svn trunk.
 <img src="http://aligot.googlecode.com/svn/img/TEA_IDA.png" height="500" >
 
 Let's check if it is a known crypto algorithm :)
-  * Get the pintool _vanilla/pin2.12/aligotTracer.dll_
+  * Get the pintool *vanilla/pin2.12/aligotTracer.dll*
   * Collect the execution trace:
 {{{
 >pin -t aligotTracer.dll startA 401020 endA 40109F -- TEA.exe
@@ -19,11 +19,11 @@ df5ec153
 6e089494
 }}}
 
-We specified the start and end addresses of the previous function with the arguments `startA` and `endA`. 
+We specified the start and end addresses of the previous function with the arguments *startA* and *endA*. 
 
 _Note: You could also collect a full trace of the program but the rest of the analysis is going to take a lot more time. Currently the tool is only suitable for such focus analysis._
 
-  * You should then obtain the file _trace.out_ that looks like this:
+  * You should then obtain the file *trace.out* that looks like this:
 {{{
 !SOT
 401020!push ebp!RR_ebp_12ff7c_esp_12ff5c!WM_12ff58_4_12ff7c!WR_esp_12ff58
@@ -33,7 +33,7 @@ _Note: You could also collect a full trace of the program but the rest of the an
 }}}
 == Extraction of possible crypto algorithms ==
 
-  * Go into _vanilla/extraction_ and launch:
+  * Go into *vanilla/extraction* and launch:
 {{{
 > python main.py trace.out
 > Aligot extraction module
@@ -57,9 +57,9 @@ _Note: You could also collect a full trace of the program but the rest of the an
 }}}
 
 You should then obtain three files:
-  # finalGraph0.png, a graph representing one possible crypto algorithm extracted from the trace.
-  # finalGraph0.dot, same graph in dot format.
-  # result.txt, contains the input-output values for each extracted algorithm.
+  # *finalGraph0.png*, a graph representing one possible crypto algorithm extracted from the trace.
+  # *finalGraph0.dot*, same graph in dot format.
+  # *result.txt*, contains the input-output values for each extracted algorithm.
 
 This last file is the one we are going to use in the next phase.
 
