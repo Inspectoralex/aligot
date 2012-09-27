@@ -70,17 +70,18 @@ _Note: You could also collect a full trace of the program but the rest of the an
 ------
 
 You should then obtain three files:
-  # *finalGraph0.png*, a graph representing one possible crypto algorithm extracted from the trace:
-<img src="http://aligot.googlecode.com/svn/img/TEA_graph.png" width="600">
-We notice that the input text, output text, key (as named when executed) have been correctly collected, but they have been separated in different parameters. The next step is going to recombine them together.
-  # *finalGraph0.dot*, same graph in dot format.
-  # *result.txt*, contains the input-output values for each extracted algorithm.
+  * *finalGraph0.png*, a graph representing one possible crypto algorithm extracted from the trace:
+<img src="http://aligot.googlecode.com/svn/img/TEA_graph.png" width="650">
+<br/>
+We notice that the input text, output text, key (as named when executed) have been correctly collected, but they are separated within different parameters. The identification phase is going to recombine them together.
+  * *finalGraph0.dot*, same graph in dot format.
+  * *result.txt*, contains the input-output values for each extracted algorithm.
 
 This last file is the one we are going to use in the next phase.
 
 _Note: For a better understanding of the tool, we can check:
   * "--debug_graph" to produce another graph describing more precisely the loops extracted from the execution trace. In this case:
-<img src="http://aligot.googlecode.com/svn/img/TEA_dg.png" height="500" >
+<img src="http://aligot.googlecode.com/svn/img/TEA_dg.png" height="400" >
 
 _We clearly see our loop, with its arguments._
 
