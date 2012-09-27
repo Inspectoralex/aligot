@@ -16,7 +16,6 @@ Let's check if it is a known crypto algorithm :)
   * Get the pintool *vanilla/pin2.12/aligotTracer.dll*
   * Collect the execution trace:
 
-{{{
 <pre>
 >pin -t aligotTracer.dll startA 401020 endA 40109F -- TEA.exe
 Input text:
@@ -26,7 +25,6 @@ deadbee1deadbee2deadbee3deadbee4
 Output text:
 df5ec1536e089494
 <pre>
-}}}
 
 
 We specified the start and end addresses of the previous function with the arguments *startA* and *endA*. 
