@@ -4,7 +4,9 @@ These examples assumed you downloaded the vanilla directory from svn trunk.
 
 = TEA =
 
-Let's analyze the program *vanilla/testBinaries/TEA.exe*. You should rapidly found the following function that seems to do some magic stuff:
+== Preliminary analysis ==
+
+Let's take a look at *vanilla/testBinaries/TEA.exe*. You should rapidly found the following function that seems to do some magic stuff:
 
 <img src="http://aligot.googlecode.com/svn/img/TEA_IDA.png" height="500" >
 
@@ -70,3 +72,52 @@ _Note: For a better understanding of the tool, we can check:
 _We clearly see our loop, with its arguments._
 
   * _"--debug_mode" to display every step of the loop detection algorithm._
+
+== Identification ==
+
+Coming soon.
+
+= RC4 =
+
+== Preliminary analysis ==
+
+== Tracing ==
+
+{{{
+>pin -t aligotTracer.
+dll startA 401060 endA 40159A -- RC4.exe
+Key:
+SuperKeyIsASuperKey
+Plaintext:
+SuperPlainMessageABaseDeTrompette
+Encrypted text:
+d3e852f160d60dd627d66860e97148f5
+}}}
+
+== Extraction of possible crypto algorithms ==
+
+  * Go into *vanilla/extraction* and launch:
+{{{
+> Aligot extraction module
+> Start: 2012-09-27 16:24:01.554000
+---------------------------
+
+> Loop detection... Done
+> Garbage collector for invalid loops... Done (70 loops suppressed)
+> Loop I/O... Done
+> Garbage collector for useless loops (no I/O)... Done (0 loops suppressed)
+> Loop data flow graph building... Done
+> Garbage collector for invalid LDFs... Done
+> Loop data flow I/O building... Done
+> Garbage collector for useless LDFs... Done
+> Assigning values to I/O memory parameters... Done
+> Dumping results... Done
+> Producing graph... Done
+
+---------------------------
+> End: 2012-09-27 16:24:02.611000
+}}}
+
+== Identification ==
+
+Coming soon.
