@@ -193,9 +193,9 @@ $ python main.py result.txt
 
 !! Identification successful: RC4 encryption with:
 > RC4 encryption
- ==> Plain text (-1 bytes) : 0x5375706572506c61696e4d6573736167654142617365446554726f6d7065747465
- ==> Key (-1 bytes) : 0x53757065724b657949734153757065724b6579
- ==> Encrypted text (-1 bytes) : 0xd3e852f160d60dd627d66860e97148f57a71ada22f319ac8bdcf7053e071bce29e
+ ==> Plain text (33 bytes) : 0x5375706572506c61696e4d6573736167654142617365446554726f6d7065747465
+ ==> Key (19 bytes) : 0x53757065724b657949734153757065724b6579
+ ==> Encrypted text (33 bytes) : 0xd3e852f160d60dd627d66860e97148f57a71ada22f319ac8bdcf7053e071bce29e
 
 -----------------------------------
 > End: 2012-10-02 14:24:54.364000
