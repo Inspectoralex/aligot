@@ -92,7 +92,31 @@ _We clearly see our loop, with its arguments._
 
 == Identification ==
 
-Coming soon.
+  * Go into *vanilla/comparison* and launch:
+------
+<pre>
+$ python main.py result.txt
+> Aligot identification module
+> Start: 2012-10-02 14:19:28.164000
+-----------------------------------
+
+> No particular ciphers selected, test with all of them : ['tea', 'xtea', 'russian_tea', 'rc4']
+> Testing LDF 1 ...
+  > Comparison with TEA...
+
+!! Identification successful: TEA decryption with:
+ ==> Encrypted text (8 bytes) : 0x0123456789abcdef
+ ==> Key (16 bytes) : 0xdeadbee1deadbee2deadbee3deadbee4
+ ==> Decrypted text (8 bytes) : 0xdf5ec1536e089494
+
+-----------------------------------
+> End: 2012-10-02 14:20:31.172000
+</pre>
+------
+
+Win \o/
+
+_Note: If you are familiar with the TEA family ciphers, you should have noticed that *finalGraph0.png* contained some very TEA-specific constant value (0xc6ef3720). In this case you could directly test for TEA-like ciphers by giving to the script "--ciphers tea xtea russian_tea"._
 
 = RC4 =
 
@@ -152,4 +176,28 @@ At this point you should get *finalGraph0.png*, *finalGraph0.dot* and *result.tx
 
 == Identification ==
 
-Coming soon.
+  * Go into *vanilla/comparison* and launch:
+------
+<pre>
+$ python main.py result.txt
+> Aligot identification module
+> Start: 2012-10-02 14:24:54.349000
+-----------------------------------
+
+> No particular ciphers selected, test with all of them : ['tea', 'xtea', 'russian_tea', 'rc4']
+> Testing LDF 1 ...
+  > Comparison with TEA... Fail!
+  > Comparison with XTEA... Fail!
+  > Comparison with RussianTEA... Fail!
+  > Comparison with RC4...
+
+!! Identification successful: RC4 encryption with:
+> RC4 encryption
+ ==> Plain text (-1 bytes) : 0x5375706572506c61696e4d6573736167654142617365446554726f6d7065747465
+ ==> Key (-1 bytes) : 0x53757065724b657949734153757065724b6579
+ ==> Encrypted text (-1 bytes) : 0xd3e852f160d60dd627d66860e97148f57a71ada22f319ac8bdcf7053e071bce29e
+
+-----------------------------------
+> End: 2012-10-02 14:24:54.364000
+</pre>
+------
