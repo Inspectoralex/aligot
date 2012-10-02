@@ -201,3 +201,5 @@ $ python main.py result.txt
 > End: 2012-10-02 14:24:54.364000
 </pre>
 ------
+
+Win \o/
