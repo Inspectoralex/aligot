@@ -100,8 +100,10 @@ $ python main.py result.txt
 > Start: 2012-10-02 14:19:28.164000
 -----------------------------------
 
-> No particular ciphers selected, test with all of them : ['tea', 'xtea', 'russian_tea', 'rc4']
+> No particular ciphers selected, test with all of them : ['tea', 'xtea', 'russian_tea', 'rc4','aes_128_core']
+
 > Testing LDF 1 ...
+  > Heuristic : Blacklisting classic values for TEA (disable it with --no-bl-heuristic)
   > Comparison with TEA...
 
 !! Identification successful: TEA decryption with:
@@ -184,7 +186,7 @@ $ python main.py result.txt
 > Start: 2012-10-02 14:24:54.349000
 -----------------------------------
 
-> No particular ciphers selected, test with all of them : ['tea', 'xtea', 'russian_tea', 'rc4']
+> No particular ciphers selected, test with all of them : ['tea', 'xtea', 'russian_tea', 'rc4','aes_128_core']
 > Testing LDF 1 ...
   > Comparison with TEA... Fail!
   > Comparison with XTEA... Fail!
